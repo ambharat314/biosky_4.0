@@ -1,0 +1,744 @@
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BioSky — Space-Powered Energy Intelligence</title>
+
+<meta content="spacetech, AI, satellite imagery, renewable energy forecasting, grid intelligence, climate analytics, decision intelligence" name="keywords"/>
+<meta content="BioSky Space Innovations Pvt. Ltd." name="author"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<meta content="BioSky Space Innovations builds a unified intelligence layer combining satellite data, AI models, and grid analytics for renewable energy forecasting, grid intelligence, and climate resilience." name="description"/><meta content="website" property="og:type"/><meta content="https://biosky.tech/" property="og:url"/><meta content="BioSky — Space-Powered Energy Intelligence" property="og:title"/><meta content="BioSky Space Innovations builds a unified intelligence layer combining satellite data, AI models, and grid analytics for renewable energy forecasting, grid intelligence, and climate resilience." property="og:description"/><meta content="https://biosky.tech/assets/satellite.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="https://biosky.tech/" name="twitter:url"/><meta content="BioSky — Space-Powered Energy Intelligence" name="twitter:title"/><meta content="BioSky Space Innovations builds a unified intelligence layer combining satellite data, AI models, and grid analytics for renewable energy forecasting, grid intelligence, and climate resilience." name="twitter:description"/><meta content="https://biosky.tech/assets/satellite.jpg" name="twitter:image"/><link href="https://biosky.tech/" rel="canonical"/></head>
+<body style="">
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+<div class="nav-container">
+<a class="nav-logo" href="index.html">
+<svg class="logo-icon" fill="none" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"></circle>
+<ellipse cx="16" cy="16" rx="8" ry="14" stroke="currentColor" stroke-width="1"></ellipse>
+<ellipse cx="16" cy="16" rx="14" ry="8" stroke="currentColor" stroke-width="1"></ellipse>
+<circle cx="16" cy="16" fill="currentColor" r="2.5"></circle>
+</svg>
+<span>BioSky</span>
+</a>
+<div class="nav-links" id="navLinks">
+<a class="nav-link" href="index.html">Home</a>
+<a class="nav-link" href="platform.html">Platform</a>
+<div class="nav-dropdown">
+<a class="nav-link" href="solutions.html">Solutions <svg fill="none" height="12" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-left: 2px;" viewbox="0 0 24 24" width="12"><path d="M6 9l6 6 6-6"></path></svg></a>
+<div class="nav-dropdown-content">
+<a href="solar-forecasting.html">Solar Forecasting</a>
+<a href="wind-forecasting.html">Wind Forecasting</a>
+</div>
+</div>
+<a class="nav-link" href="about.html">About</a>
+<a class="nav-link" href="careers.html">Careers</a>
+<a class="nav-link nav-link-cta" href="about.html#contact">Get in Touch</a>
+</div>
+<button aria-label="Toggle navigation" class="nav-toggle" id="navToggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</nav>
+<!-- ===== HERO ===== -->
+<section class="hero hero-photo" id="hero">
+<div class="hero-photo-bg" style="background-image: url('assets/satellite.jpg');"></div>
+<div class="hero-photo-overlay"></div>
+<!-- Animated Orbiting Satellite Ring -->
+<div class="orbit-container">
+<svg class="orbit-ring" fill="none" viewbox="0 0 600 600">
+<!-- Orbit path -->
+<ellipse class="orbit-path" cx="300" cy="300" rx="280" ry="120" stroke="rgba(28,192,175,0.15)" stroke-dasharray="8 6" stroke-width="1"></ellipse>
+<!-- Orbiting satellite dot -->
+<circle class="orbit-satellite" fill="#1CC0AF" r="4">
+<animatemotion dur="12s" path="M300,300 m-280,0 a280,120 0 1,0 560,0 a280,120 0 1,0 -560,0" repeatcount="indefinite"></animatemotion>
+</circle>
+<!-- Glow trail -->
+<circle class="orbit-glow" fill="rgba(28,192,175,0.3)" r="8">
+<animatemotion dur="12s" path="M300,300 m-280,0 a280,120 0 1,0 560,0 a280,120 0 1,0 -560,0" repeatcount="indefinite"></animatemotion>
+</circle>
+<!-- Second orbit -->
+<ellipse cx="300" cy="300" rx="200" ry="200" stroke="rgba(28,192,175,0.08)" stroke-dasharray="4 8" stroke-width="0.5" transform="rotate(60, 300, 300)"></ellipse>
+<circle fill="rgba(28,192,175,0.6)" r="3">
+<animatemotion dur="18s" path="M300,300 m-200,0 a200,200 0 1,0 400,0 a200,200 0 1,0 -400,0" repeatcount="indefinite"></animatemotion>
+</circle>
+</svg>
+</div>
+<!-- Scanning Radar Sweep -->
+<div class="radar-sweep"></div>
+<!-- Floating Particles canvas -->
+<canvas height="844" id="heroParticles" width="390"></canvas>
+<div class="hero-content">
+<div class="hero-badge">
+<span class="badge-dot"></span>
+        Space-Powered Intelligence
+      </div>
+<h1 class="hero-title">
+        Reimagining Energy<br/>Resilience from Space
+      </h1>
+<p class="hero-subtitle">
+        AI-powered satellite intelligence for smarter, cleaner,<br class="hide-mobile"/>
+        and more reliable energy systems.
+      </p>
+<div class="hero-cta">
+<a class="btn btn-primary" href="#contact">Get a Demo</a>
+<a class="btn btn-secondary" href="#platform">Explore Platform
+          <svg fill="none" height="16" viewbox="0 0 16 16" width="16">
+<path d="M6 12L10 8L6 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="hero-scroll-indicator">
+<div class="scroll-line"></div>
+<span>Scroll</span>
+</div>
+</section>
+<!-- ===== ABOUT ===== -->
+<section class="section section-about" id="about">
+<div class="container">
+<div class="section-label">About BioSky</div>
+<div class="about-grid">
+<div class="about-text">
+<h2 class="section-title typed" data-original-html="Building the intelligence layer&lt;br&gt;between space and energy.">Building the
+            intelligence layer<br/>between space and energy.<span class="typewriter-cursor"></span></h2>
+<p class="about-description">
+            BioSky is a spacetech company using AI and satellite imagery to power energy resilience and
+            decision-making in the energy sector. We build a unified intelligence layer combining satellite data,
+            AI models, and grid analytics to improve reliability, forecasting, and climate resilience.
+          </p>
+</div>
+<div class="about-cards">
+<div class="mission-card reveal-item revealed">
+<div class="mission-icon">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1.2"></circle>
+<path d="M24 4V24L36 36" stroke="currentColor" stroke-linecap="round" stroke-width="1.2"></path>
+<circle cx="24" cy="24" fill="currentColor" r="3"></circle>
+</svg>
+</div>
+<h3>Mission</h3>
+<p>To build India's first space-powered energy intelligence stack for clean, reliable, and equitable power.
+            </p>
+</div>
+<div class="mission-card reveal-item revealed">
+<div class="mission-icon">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 4L28 16H40L30 24L34 36L24 28L14 36L18 24L8 16H20L24 4Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.2"></path>
+</svg>
+</div>
+<h3>Vision</h3>
+<p>To create a global spacetech leader delivering transformative solutions across industries.</p>
+</div>
+</div>
+</div>
+<!-- Satellite illustration -->
+<div class="about-illustration">
+<svg class="about-svg" fill="none" viewbox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+<line stroke="#508083" stroke-width="0.5" x1="0" x2="800" y1="180" y2="180"></line>
+<!-- Earth horizon curve -->
+<path d="M0 180 Q400 120 800 180" fill="none" stroke="#74AEB3" stroke-width="1"></path>
+<!-- Detailed Satellite -->
+<g class="satellite-float" transform="translate(380, 40)">
+<!-- Solar Array Left -->
+<rect fill="rgba(28, 192, 175, 0.1)" height="6" stroke="#1CC0AF" stroke-width="0.8" width="22" x="-35" y="-3"></rect>
+<line stroke="#1CC0AF" stroke-width="0.5" x1="-24" x2="-24" y1="-3" y2="3"></line>
+<line stroke="#1CC0AF" stroke-width="0.5" x1="-19" x2="-19" y1="-3" y2="3"></line>
+<!-- Solar Array Right -->
+<rect fill="rgba(28, 192, 175, 0.1)" height="6" stroke="#1CC0AF" stroke-width="0.8" width="22" x="13" y="-3"></rect>
+<line stroke="#1CC0AF" stroke-width="0.5" x1="19" x2="19" y1="-3" y2="3"></line>
+<line stroke="#1CC0AF" stroke-width="0.5" x1="24" x2="24" y1="-3" y2="3"></line>
+<!-- Core Body -->
+<rect fill="#ffffff" height="12" rx="1" stroke="#1E293B" stroke-width="1.2" width="16" x="-8" y="-6"></rect>
+<rect height="4" stroke="#74AEB3" stroke-width="0.8" width="8" x="-4" y="-2"></rect>
+<line stroke="#1CC0AF" stroke-width="1" x1="-13" x2="-8" y1="0" y2="0"></line>
+<line stroke="#1CC0AF" stroke-width="1" x1="8" x2="13" y1="0" y2="0"></line>
+<!-- Antenna / Dish -->
+<path d="M-2 -6 L-4 -12 A6 6 0 0 1 4 -12 L2 -6" fill="none" stroke="#1CC0AF" stroke-width="1"></path>
+<circle cx="0" cy="-14" fill="#1E293B" r="1.5"></circle>
+<!-- Sensors -->
+<path d="M-3 6 L-3 10 M3 6 L3 8" stroke="#1CC0AF" stroke-width="1"></path>
+<!-- Signal waves -->
+<path d="M0 12 Q-10 25 -20 45" fill="none" stroke="#74AEB3" stroke-dasharray="3 3" stroke-width="0.6">
+</path>
+<path d="M0 12 Q10 25 20 45" fill="none" stroke="#74AEB3" stroke-dasharray="3 3" stroke-width="0.6"></path>
+<path d="M0 12 L0 45" fill="none" stroke="#74AEB3" stroke-dasharray="3 3" stroke-width="0.6"></path>
+</g>
+<!-- Data points on curve -->
+<circle cx="200" cy="158" fill="#1CC0AF" r="2"></circle>
+<circle cx="350" cy="135" fill="#1CC0AF" r="2"></circle>
+<circle cx="500" cy="140" fill="#1CC0AF" r="2"></circle>
+<circle cx="650" cy="155" fill="#1CC0AF" r="2"></circle>
+<!-- Improved Isometric Solar panels on ground -->
+<g transform="translate(180, 155)">
+<!-- Left Panel Array -->
+<g transform="translate(0, 0)">
+<line stroke="#1CC0AF" stroke-linecap="round" stroke-width="1.5" x1="12" x2="12" y1="2" y2="12"></line>
+<line stroke="#1CC0AF" stroke-linecap="round" stroke-width="1.5" x1="9" x2="15" y1="12" y2="12"></line>
+<path d="M 0 0 L 18 -6 L 24 0 L 6 6 Z" fill="rgba(28,192,175,0.2)" stroke="#1CC0AF" stroke-linejoin="round" stroke-width="1"></path>
+<line stroke="#74AEB3" stroke-width="0.5" x1="2" x2="20" y1="2" y2="-4"></line>
+<line stroke="#74AEB3" stroke-width="0.5" x1="4" x2="22" y1="4" y2="-2"></line>
+<line stroke="#74AEB3" stroke-width="0.8" x1="6" x2="12" y1="-2" y2="4"></line>
+<line stroke="#74AEB3" stroke-width="0.8" x1="12" x2="18" y1="-4" y2="2"></line>
+</g>
+<!-- Right Panel Array -->
+<g transform="translate(30, -5)">
+<line stroke="#1CC0AF" stroke-linecap="round" stroke-width="1.5" x1="12" x2="12" y1="2" y2="12"></line>
+<line stroke="#1CC0AF" stroke-linecap="round" stroke-width="1.5" x1="9" x2="15" y1="12" y2="12"></line>
+<path d="M 0 0 L 18 -6 L 24 0 L 6 6 Z" fill="rgba(28,192,175,0.2)" stroke="#1CC0AF" stroke-linejoin="round" stroke-width="1"></path>
+<line stroke="#74AEB3" stroke-width="0.5" x1="2" x2="20" y1="2" y2="-4"></line>
+<line stroke="#74AEB3" stroke-width="0.5" x1="4" x2="22" y1="4" y2="-2"></line>
+<line stroke="#74AEB3" stroke-width="0.8" x1="6" x2="12" y1="-2" y2="4"></line>
+<line stroke="#74AEB3" stroke-width="0.8" x1="12" x2="18" y1="-4" y2="2"></line>
+</g>
+</g>
+<!-- Detailed Wind turbine -->
+<g transform="translate(600, 140)">
+<path d="M-1.5 38 L1.5 38 L0.5 0 L-0.5 0 Z" fill="rgba(28, 192, 175, 0.05)" stroke="#1CC0AF" stroke-width="0.8"></path>
+<circle cx="0" cy="0" fill="#1E293B" r="2"></circle>
+<path d="M0 0 C -3 -10, -5 -16, 0 -18 C -1 -10, 1 0, 0 0 Z" fill="rgba(28, 192, 175, 0.1)" stroke="#1CC0AF" stroke-width="0.6" transform="rotate(0)"></path>
+<path d="M0 0 C -3 -10, -5 -16, 0 -18 C -1 -10, 1 0, 0 0 Z" fill="rgba(28, 192, 175, 0.1)" stroke="#1CC0AF" stroke-width="0.6" transform="rotate(120)"></path>
+<path d="M0 0 C -3 -10, -5 -16, 0 -18 C -1 -10, 1 0, 0 0 Z" fill="rgba(28, 192, 175, 0.1)" stroke="#1CC0AF" stroke-width="0.6" transform="rotate(240)"></path>
+</g>
+</svg>
+</div>
+</div>
+</section>
+<!-- ===== PHOTO BREAK: SOLAR FARM ===== -->
+<section class="photo-break">
+<div class="photo-break-bg" style='background-image: url("assets/solar_farm.jpg"); transform: translateY(-168.525px) scale(1.05);'>
+</div>
+<div class="photo-break-overlay"></div>
+<div class="photo-break-content">
+<h2 class="photo-break-title">SOLAR INTELLIGENCE</h2>
+<p class="photo-break-subtitle">Sub-hourly solar energy forecasting powered by satellite imagery and AI.</p>
+</div>
+</section>
+<!-- ===== SOLUTIONS ===== -->
+<section class="section section-solutions" id="solutions">
+<div class="container">
+<div class="section-label">Solutions</div>
+<h2 class="section-title typed" data-original-html="Intelligence for every layer&lt;br&gt;of the energy ecosystem.">Intelligence for every
+        layer<br/>of the energy ecosystem.<span class="typewriter-cursor"></span></h2>
+<div class="solutions-grid">
+<div class="solution-card reveal-item revealed">
+<div class="solution-number">01</div>
+<div class="solution-icon">
+<svg fill="none" viewbox="0 0 48 48">
+<!-- Detailed Solution 1: Forecasting -->
+<circle cx="24" cy="24" fill="rgba(255,255,255,0.05)" r="14" stroke="currentColor" stroke-width="1">
+</circle>
+<path d="M24 10 V24 L34 34" stroke="currentColor" stroke-linecap="round" stroke-width="1.2"></path>
+<circle cx="24" cy="24" fill="currentColor" r="2"></circle>
+<!-- Dynamic Rays -->
+<line stroke="currentColor" stroke-width="1" x1="24" x2="24" y1="2" y2="6"></line>
+<line stroke="currentColor" stroke-width="1" x1="24" x2="24" y1="42" y2="46"></line>
+<line stroke="currentColor" stroke-width="1" x1="2" x2="6" y1="24" y2="24"></line>
+<line stroke="currentColor" stroke-width="1" x1="42" x2="46" y1="24" y2="24"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="8" x2="11" y1="8" y2="11"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="40" x2="37" y1="40" y2="37"></line>
+<!-- Forecast Graph -->
+<path d="M4 42 Q12 30 18 36 Q24 42 30 28 Q36 14 44 20" fill="none" opacity="0.7" stroke="currentColor" stroke-dasharray="2 2" stroke-width="1"></path>
+</svg>
+</div>
+<h3>Renewable Energy Forecasting</h3>
+<p>Sub-hourly solar and wind generation forecasting using satellite imagery, weather data, and
+            deep learning models for grid-ready accuracy.</p>
+</div>
+<div class="solution-card reveal-item revealed">
+<div class="solution-number">02</div>
+<div class="solution-icon">
+<svg fill="none" viewbox="0 0 48 48">
+<!-- Detailed Solution 2: Grid Intelligence -->
+<!-- Hexagon Structure -->
+<path d="M24 6 L40 15 L40 33 L24 42 L8 33 L8 15 Z" fill="none" stroke="currentColor" stroke-width="1">
+</path>
+<path d="M24 6 L24 24 M40 15 L24 24 M40 33 L24 24 M24 42 L24 24 M8 33 L24 24 M8 15 L24 24" opacity="0.6" stroke="currentColor" stroke-width="0.5"></path>
+<!-- Nodes -->
+<circle cx="24" cy="6" fill="currentColor" r="2.5"></circle>
+<circle cx="40" cy="15" fill="currentColor" r="2.5"></circle>
+<circle cx="40" cy="33" fill="currentColor" r="2.5"></circle>
+<circle cx="24" cy="42" fill="currentColor" r="2.5"></circle>
+<circle cx="8" cy="33" fill="currentColor" r="2.5"></circle>
+<circle cx="8" cy="15" fill="currentColor" r="2.5"></circle>
+<circle cx="24" cy="24" fill="#ffffff" r="4" stroke="currentColor" stroke-width="1.5"></circle>
+<circle cx="24" cy="24" fill="currentColor" r="1.5"></circle>
+</svg>
+</div>
+<h3>Earth Observation Analytics</h3>
+<p>Multi-sensor satellite imagery analysis combining optical and radar data for
+            comprehensive environmental and infrastructure monitoring.</p>
+</div>
+<div class="solution-card reveal-item revealed">
+<div class="solution-number">03</div>
+<div class="solution-icon">
+<svg fill="none" viewbox="0 0 48 48">
+<!-- Detailed Solution 3: Climate Analytics -->
+<!-- Abstract Earth/Weather -->
+<circle cx="24" cy="24" fill="none" r="18" stroke="currentColor" stroke-dasharray="8 4" stroke-width="1">
+</circle>
+<!-- Cloud -->
+<path d="M16 28 Q16 22 22 22 Q22 16 30 16 Q38 16 38 24 Q42 24 42 28 Q42 32 38 32 H16 Q12 32 12 28 Z" fill="rgba(255,255,255,0.1)" stroke="currentColor" stroke-width="1"></path>
+<!-- Precipitation / Data -->
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1" x1="18" x2="16" y1="35" y2="40">
+</line>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1" x1="24" x2="22" y1="35" y2="42">
+</line>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1" x1="30" x2="28" y1="35" y2="40">
+</line>
+<line stroke="currentColor" stroke-linecap="round" stroke-width="1" x1="36" x2="34" y1="35" y2="38">
+</line>
+<!-- Data nodes -->
+<circle cx="30" cy="18" fill="currentColor" r="1.5"></circle>
+<circle cx="36" cy="22" fill="currentColor" r="1"></circle>
+</svg>
+</div>
+<h3>Climate &amp; Weather Intelligence</h3>
+<p>Satellite-powered climate risk analysis and weather intelligence for energy infrastructure
+            adaptation and long-term resilience planning.</p>
+</div>
+<div class="solution-card reveal-item revealed">
+<div class="solution-number">04</div>
+<div class="solution-icon">
+<svg fill="none" viewbox="0 0 48 48">
+<!-- Detailed Solution 4: Earth Observation -->
+<circle cx="24" cy="24" fill="none" r="18" stroke="currentColor" stroke-width="1"></circle>
+<ellipse cx="24" cy="24" fill="none" rx="18" ry="8" stroke="currentColor" stroke-width="0.5"></ellipse>
+<ellipse cx="24" cy="24" fill="none" rx="8" ry="18" stroke="currentColor" stroke-width="0.5"></ellipse>
+<!-- Scan beam -->
+<path d="M24 6 L18 24 L30 24 Z" fill="currentColor" opacity="0.15" stroke="currentColor" stroke-width="0.5"></path>
+<circle cx="24" cy="24" fill="currentColor" r="3"></circle>
+<circle cx="24" cy="6" fill="currentColor" r="2"></circle>
+</svg>
+</div>
+<h3>Grid Intelligence &amp; Monitoring</h3>
+<p>Real-time grid health monitoring, congestion prediction, and demand-supply balancing integrated
+            with satellite-derived environmental insights.</p>
+</div>
+<div class="solution-card reveal-item revealed">
+<div class="solution-number">05</div>
+<div class="solution-icon">
+<svg fill="none" viewbox="0 0 48 48">
+<!-- Detailed Solution 5: Decision Intelligence Platform -->
+<rect fill="none" height="28" rx="3" stroke="currentColor" stroke-width="1" width="32" x="8" y="10"></rect>
+<line stroke="currentColor" stroke-width="0.5" x1="8" x2="40" y1="18" y2="18"></line>
+<!-- Dashboard elements -->
+<rect fill="currentColor" height="6" opacity="0.2" rx="1" stroke="currentColor" stroke-width="0.5" width="10" x="12" y="22"></rect>
+<rect fill="currentColor" height="6" opacity="0.2" rx="1" stroke="currentColor" stroke-width="0.5" width="10" x="26" y="22"></rect>
+<path d="M14 32 L18 28 L22 30 L26 26 L30 29 L34 25" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1"></path>
+<circle cx="34" cy="25" fill="currentColor" r="1.5"></circle>
+<!-- Status dots -->
+<circle cx="12" cy="14" fill="currentColor" r="1"></circle>
+<circle cx="16" cy="14" fill="currentColor" r="1"></circle>
+<circle cx="20" cy="14" fill="currentColor" r="1"></circle>
+</svg>
+</div>
+<h3>Decision Intelligence Platform</h3>
+<p>Unified dashboard and API layer delivering real-time energy insights, automated alerts,
+            and AI-driven recommendations for operators and stakeholders.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== PROBLEM STATEMENT ===== -->
+<section class="section section-problem" id="problem">
+<div class="container">
+<div class="problem-content">
+<h2 class="problem-title">Energy Stability Isn't Just an Engineering Problem<br/><span class="problem-highlight">— It's a Human &amp; Social One</span></h2>
+<p class="problem-desc">
+          Climate volatility, aging infrastructure, and rising renewable penetration are creating unprecedented challenges for energy grids worldwide. Traditional forecasting tools weren't designed for this level of complexity.
+        </p>
+<div class="problem-stats-row">
+<div class="problem-stat reveal-item">
+<div class="problem-stat-icon">
+<svg fill="none" viewbox="0 0 32 32"><path d="M16 2L20 12H30L22 18L25 28L16 22L7 28L10 18L2 12H12L16 2Z" fill="rgba(28,192,175,0.1)" stroke="currentColor" stroke-width="1.2"></path></svg>
+</div>
+<span class="problem-stat-value">1.4 Billion</span>
+<span class="problem-stat-label">People lack reliable electricity access globally</span>
+</div>
+<div class="problem-stat reveal-item">
+<div class="problem-stat-icon">
+<svg fill="none" viewbox="0 0 32 32"><circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="1.2"></circle><path d="M16 4v24M4 16h24" opacity="0.4" stroke="currentColor" stroke-width="0.8"></path><path d="M8 12L14 16L10 22L18 18L24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.2"></path></svg>
+</div>
+<span class="problem-stat-value">$150B+</span>
+<span class="problem-stat-label">Annual losses from grid failures and outages</span>
+</div>
+<div class="problem-stat reveal-item">
+<div class="problem-stat-icon">
+<svg fill="none" viewbox="0 0 32 32"><path d="M6 26L6 10L12 10L12 26M20 26L20 6L26 6L26 26" stroke="currentColor" stroke-width="1.2"></path><line stroke="currentColor" stroke-dasharray="2 2" stroke-width="0.8" x1="12" x2="20" y1="14" y2="14"></line></svg>
+</div>
+<span class="problem-stat-value">30–40%</span>
+<span class="problem-stat-label">Renewable curtailment due to poor forecasting</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== PHOTO BREAK: WIND FARM ===== -->
+<section class="photo-break">
+<div class="photo-break-bg" style="background-image: url('assets/wind_farm.jpg');"></div>
+<div class="photo-break-overlay"></div>
+<div class="photo-break-content">
+<h2 class="photo-break-title">WIND INTELLIGENCE</h2>
+<p class="photo-break-subtitle">Real-time wind generation forecasting with satellite-driven atmospheric modeling.</p>
+</div>
+</section>
+<!-- ===== ENERGY STACK ===== -->
+<section class="section section-stack" id="stack">
+<div class="container">
+<div class="section-label">Platform Overview</div>
+<h2 class="section-title center">Climate and Infrastructure Risk<br/>Across Energy Ecosystem</h2>
+<p class="section-desc center">A unified intelligence layer combining satellite data, AI models, and grid analytics to power every layer of the energy value chain.</p>
+<div class="stack-visual">
+<div class="stack-diagram">
+<!-- Stack layers -->
+<div class="stack-layer stack-layer-active reveal-item">
+<div class="stack-layer-glow"></div>
+<div class="stack-layer-content">
+<div class="stack-layer-icon">
+<svg fill="none" viewbox="0 0 40 40"><rect height="24" rx="3" stroke="currentColor" stroke-width="1.2" width="28" x="6" y="8"></rect><path d="M12 16L18 20L12 24M22 24H28" stroke="currentColor" stroke-linecap="round" stroke-width="1.2"></path></svg>
+</div>
+<div class="stack-layer-text">
+<h4>Active Intelligence</h4>
+<p>Real-time decision support, alerts, and automated actions</p>
+</div>
+<span class="stack-layer-tag">Active</span>
+</div>
+</div>
+<div class="stack-layer stack-layer-ai reveal-item">
+<div class="stack-layer-glow"></div>
+<div class="stack-layer-content">
+<div class="stack-layer-icon">
+<svg fill="none" viewbox="0 0 40 40"><circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.2"></circle><circle cx="20" cy="20" r="5" stroke="currentColor" stroke-width="0.8"></circle><path d="M20 8v5M20 27v5M8 20h5M27 20h5" stroke="currentColor" stroke-width="0.8"></path></svg>
+</div>
+<div class="stack-layer-text">
+<h4>AI / ML Models</h4>
+<p>Deep learning forecasting, anomaly detection, and pattern recognition</p>
+</div>
+<span class="stack-layer-tag">AI/ML</span>
+</div>
+</div>
+<div class="stack-layer stack-layer-data reveal-item">
+<div class="stack-layer-glow"></div>
+<div class="stack-layer-content">
+<div class="stack-layer-icon">
+<svg fill="none" viewbox="0 0 40 40"><ellipse cx="20" cy="12" rx="14" ry="5" stroke="currentColor" stroke-width="1.2"></ellipse><path d="M6 12v16c0 2.8 6.3 5 14 5s14-2.2 14-5V12" stroke="currentColor" stroke-width="1.2"></path><path d="M6 20c0 2.8 6.3 5 14 5s14-2.2 14-5" stroke="currentColor" stroke-width="0.8"></path></svg>
+</div>
+<div class="stack-layer-text">
+<h4>Data Foundation</h4>
+<p>Satellite imagery, weather APIs, grid telemetry, and historical datasets</p>
+</div>
+<span class="stack-layer-tag">Data</span>
+</div>
+</div>
+</div>
+<div class="stack-side-info">
+<div class="stack-info-card reveal-item">
+<div class="stack-info-icon">
+<svg fill="none" viewbox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.2"></circle><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" stroke="currentColor" stroke-width="0.8"></path><line stroke="currentColor" stroke-width="0.8" x1="2" x2="22" y1="12" y2="12"></line></svg>
+</div>
+<h5>Multi-Sensor Satellite Data</h5>
+<p>Optical, radar, and thermal imagery from 12+ satellite constellations</p>
+</div>
+<div class="stack-info-card reveal-item">
+<div class="stack-info-icon">
+<svg fill="none" viewbox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path></svg>
+</div>
+<h5>Sub-Hourly Forecasting</h5>
+<p>15-minute resolution predictions with 95%+ accuracy benchmarks</p>
+</div>
+<div class="stack-info-card reveal-item">
+<div class="stack-info-icon">
+<svg fill="none" viewbox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.2"></path><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2"></path></svg>
+</div>
+<h5>Grid-Ready Output</h5>
+<p>Direct API integration with SCADA, EMS, and scheduling systems</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== OUR IMPACT ===== -->
+<section class="section section-our-impact" id="our-impact">
+<div class="container">
+<div class="section-label">Our Impact</div>
+<h2 class="section-title center">Measurable Outcomes<br/>Across the Energy Value Chain</h2>
+<p class="section-desc center">Proven results powering generation, transmission, and distribution operations.</p>
+<!-- GENERATION -->
+<div class="impact-category reveal-item">
+<h3 class="impact-category-title">
+<svg fill="none" height="24" viewbox="0 0 24 24" width="24"><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.5"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+          Generation
+        </h3>
+<div class="impact-metrics-row">
+<div class="impact-metric-card">
+<span class="metric-value" data-target="20">0</span><span class="metric-suffix">%</span>
+<p class="metric-label">Revenue improvement from better generation planning</p>
+<div class="metric-bar"><div class="metric-fill" style="--fill: 60%"></div></div>
+</div>
+<div class="impact-metric-card">
+<span class="metric-value" data-target="15">0</span><span class="metric-suffix">%</span>
+<p class="metric-label">Improved risk profile for lender due-diligence</p>
+<div class="metric-bar"><div class="metric-fill" style="--fill: 50%"></div></div>
+</div>
+<div class="impact-metric-card">
+<span class="metric-value" data-target="18">0</span><span class="metric-suffix">%</span>
+<p class="metric-label">Downtime reduction through predictive maintenance</p>
+<div class="metric-bar"><div class="metric-fill" style="--fill: 55%"></div></div>
+</div>
+</div>
+</div>
+<!-- TRANSMISSION -->
+<div class="impact-category reveal-item">
+<h3 class="impact-category-title">
+<svg fill="none" height="24" viewbox="0 0 24 24" width="24"><path d="M4 20L8 4h2l4 8h2l4-8h2l-2 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path><line stroke="currentColor" stroke-dasharray="3 2" stroke-width="0.8" x1="3" x2="21" y1="12" y2="12"></line></svg>
+          Transmission
+        </h3>
+<div class="impact-metrics-row">
+<div class="impact-metric-card">
+<span class="metric-value" data-target="30">0</span><span class="metric-suffix">%</span>
+<p class="metric-label">Lower planned outage costs through predictive scheduling</p>
+<div class="metric-bar"><div class="metric-fill" style="--fill: 70%"></div></div>
+</div>
+<div class="impact-metric-card">
+<span class="metric-value" data-target="70">0</span><span class="metric-suffix">%</span>
+<p class="metric-label">Reduction in unplanned grid congestion events</p>
+<div class="metric-bar"><div class="metric-fill" style="--fill: 85%"></div></div>
+</div>
+<div class="impact-metric-card">
+<div style="display:flex;align-items:baseline;justify-content:center;">
+<span class="metric-value" style="font-size:2.4rem;">20-30</span><span class="metric-suffix">%</span>
+</div>
+<p class="metric-label">Reduced asset failure rate through satellite monitoring</p>
+<div class="metric-bar"><div class="metric-fill" style="--fill: 65%"></div></div>
+</div>
+</div>
+</div>
+<!-- DISTRIBUTION -->
+<div class="impact-category reveal-item">
+<h3 class="impact-category-title">
+<svg fill="none" height="24" viewbox="0 0 24 24" width="24"><rect height="7" rx="1" stroke="currentColor" stroke-width="1.5" width="7" x="3" y="3"></rect><rect height="7" rx="1" stroke="currentColor" stroke-width="1.5" width="7" x="14" y="3"></rect><rect height="7" rx="1" stroke="currentColor" stroke-width="1.5" width="7" x="3" y="14"></rect><rect height="7" rx="1" stroke="currentColor" stroke-width="1.5" width="7" x="14" y="14"></rect><path d="M10 6.5h4M6.5 10v4M17.5 10v4M10 17.5h4" stroke="currentColor" stroke-width="0.8"></path></svg>
+          Distribution
+        </h3>
+<div class="impact-metrics-row">
+<div class="impact-metric-card">
+<div style="display:flex;align-items:baseline;justify-content:center;">
+<span class="metric-value" style="font-size:2.4rem;">5-10</span><span class="metric-suffix">%</span>
+</div>
+<p class="metric-label">Improved demand forecast accuracy for utilities</p>
+<div class="metric-bar"><div class="metric-fill" style="--fill: 40%"></div></div>
+</div>
+<div class="impact-metric-card">
+<span class="metric-value" data-target="15">0</span><span class="metric-suffix">%</span>
+<p class="metric-label">Reduction in feeder-level technical losses</p>
+<div class="metric-bar"><div class="metric-fill" style="--fill: 50%"></div></div>
+</div>
+<div class="impact-metric-card">
+<div style="display:flex;align-items:baseline;justify-content:center;">
+<span class="metric-value" style="font-size:2.4rem;">25-40</span><span class="metric-suffix">%</span>
+</div>
+<p class="metric-label">Lower theft/bill-level losses from anomaly detection</p>
+<div class="metric-bar"><div class="metric-fill" style="--fill: 75%"></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== PHOTO BREAK: EARTH ORBIT ===== -->
+<section class="photo-break">
+<div class="photo-break-bg" style="background-image: url('assets/earth_orbit.jpg');"></div>
+<div class="photo-break-overlay"></div>
+<div class="photo-break-content">
+<h2 class="photo-break-title">EARTH OBSERVATION</h2>
+<p class="photo-break-subtitle">Monitoring the planet's energy infrastructure with multi-sensor satellite imagery.</p>
+</div>
+</section>
+<!-- ===== KNOWLEDGE HUB ===== -->
+<section class="section section-knowledge" id="knowledge">
+<div class="container">
+<div class="section-label">Knowledge Hub</div>
+<h2 class="section-title center">Discover how BioSky's solutions<br/>drive real-world impact</h2>
+<p class="section-desc center">Featured case studies showcasing our technology in action across the energy sector.</p>
+<div class="knowledge-grid">
+<div class="knowledge-card knowledge-card-featured reveal-item">
+<div class="knowledge-card-image">
+<img alt="Solar Farm Case Study" loading="lazy" src="assets/solar_farm.jpg"/>
+<div class="knowledge-card-overlay"></div>
+</div>
+<div class="knowledge-card-body">
+<div class="knowledge-card-meta">
+<span class="knowledge-tag">Case Study</span>
+<span class="knowledge-date">October 2025</span>
+</div>
+<h3>Forecasting Instability in Solar Grids — SunPower Renewables</h3>
+<p>How BioSky's satellite-powered forecasting engine reduced solar curtailment by 28% and improved grid scheduling accuracy for a 200 MW solar installation in Rajasthan.</p>
+<a class="knowledge-read-more" href="#">
+              Read More
+              <svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</a>
+</div>
+</div>
+<div class="knowledge-card reveal-item">
+<div class="knowledge-card-image">
+<img alt="Grid Intelligence Case Study" loading="lazy" src="assets/power_grid.jpg"/>
+<div class="knowledge-card-overlay"></div>
+</div>
+<div class="knowledge-card-body">
+<div class="knowledge-card-meta">
+<span class="knowledge-tag">White Paper</span>
+<span class="knowledge-date">August 2025</span>
+</div>
+<h3>Satellite-Driven Grid Congestion Prediction</h3>
+<p>Leveraging multi-sensor satellite data and AI to predict transmission congestion 48 hours in advance.</p>
+<a class="knowledge-read-more" href="#">
+              Read More
+              <svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</a>
+</div>
+</div>
+<div class="knowledge-card reveal-item">
+<div class="knowledge-card-image">
+<img alt="Wind Forecasting Case Study" loading="lazy" src="assets/wind_farm.jpg"/>
+<div class="knowledge-card-overlay"></div>
+</div>
+<div class="knowledge-card-body">
+<div class="knowledge-card-meta">
+<span class="knowledge-tag">Technical Brief</span>
+<span class="knowledge-date">June 2025</span>
+</div>
+<h3>Wind Ramp Prediction Using Atmospheric Modeling</h3>
+<p>Achieving 15-minute resolution wind ramp forecasts with satellite-derived atmospheric boundary data.</p>
+<a class="knowledge-read-more" href="#">
+              Read More
+              <svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== CTA SECTION ===== -->
+<section class="section section-cta" id="cta">
+<div class="cta-bg"></div>
+<div class="container" style="position:relative; z-index:2;">
+<div class="cta-content">
+<div class="cta-badge">
+<span class="badge-dot"></span>
+          Now Accepting Early Partners
+        </div>
+<h2 class="cta-title">Ready to Transform Your<br/>Energy Operations?</h2>
+<p class="cta-subtitle">Join India's leading energy companies using space-powered intelligence for smarter grid decisions, better forecasting, and climate resilience.</p>
+<div class="cta-buttons">
+<a class="btn btn-primary" href="about.html#contact">Get a Demo</a>
+<a class="btn btn-secondary" href="platform.html">Explore Platform
+            <svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M6 12L10 8L6 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</a>
+</div>
+<div class="cta-trust-logos">
+<span class="cta-trust-text">Backed by</span>
+<div class="cta-trust-items">
+<span class="trust-badge">ISRO Incubation</span>
+<span class="trust-badge">IIT Delhi</span>
+<span class="trust-badge">DST NIDHI</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+<div class="container">
+<div class="footer-top">
+<div class="footer-brand">
+<a class="nav-logo footer-logo" href="index.html">
+<svg class="logo-icon" fill="none" viewbox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"></circle>
+<ellipse cx="16" cy="16" rx="8" ry="14" stroke="currentColor" stroke-width="1"></ellipse>
+<ellipse cx="16" cy="16" rx="14" ry="8" stroke="currentColor" stroke-width="1"></ellipse>
+<circle cx="16" cy="16" fill="currentColor" r="2.5"></circle>
+</svg>
+<span>BioSky</span>
+</a>
+<p>AI + satellite-powered energy intelligence<br/>for a clean, reliable, and equitable future.</p>
+</div>
+<div class="footer-links">
+<div class="footer-col">
+<h5>Company</h5>
+<a href="about.html">About</a>
+<a href="about.html#team">Team</a>
+<a href="careers.html">Careers</a>
+<a href="about.html#contact">Contact</a>
+</div>
+<div class="footer-col">
+<h5>Platform</h5>
+<a href="platform.html">Technology</a>
+<a href="solutions.html">Solutions</a>
+<a href="platform.html#how-it-works">How It Works</a>
+<a href="solutions.html#use-cases">Use Cases</a>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2024 BioSky Space Innovations Pvt. Ltd. All rights reserved.</p>
+<div class="footer-social">
+<a aria-label="LinkedIn" href="https://in.linkedin.com/company/bioskyspaceinnovations" target="_blank">
+<svg fill="none" height="18" viewbox="0 0 24 24" width="18">
+<path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+<a aria-label="Website" href="https://biosky.tech" target="_blank">
+<svg fill="none" height="18" viewbox="0 0 24 24" width="18">
+<path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+</div>
+</div>
+
+</footer>
+<script src="script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+    // <![CDATA[  <-- For SVG support
+    if ('WebSocket' in window) {
+      (function () {
+        function refreshCSS() {
+          var sheets = [].slice.call(document.getElementsByTagName("link"));
+          var head = document.getElementsByTagName("head")[0];
+          for (var i = 0; i < sheets.length; ++i) {
+            var elem = sheets[i];
+            var parent = elem.parentElement || head;
+            parent.removeChild(elem);
+            var rel = elem.rel;
+            if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+              var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+              elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+            }
+            parent.appendChild(elem);
+          }
+        }
+        var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+        var address = protocol + window.location.host + window.location.pathname + '/ws';
+        var socket = new WebSocket(address);
+        socket.onmessage = function (msg) {
+          if (msg.data == 'reload') window.location.reload();
+          else if (msg.data == 'refreshcss') refreshCSS();
+        };
+        if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+          console.log('Live reload enabled.');
+          sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+        }
+      })();
+    }
+    else {
+      console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+    }
+    // ]]>
+  </script>
+</body>
+</html>
